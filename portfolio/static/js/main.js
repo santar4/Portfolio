@@ -86,3 +86,80 @@
     }
   });
 })();
+/* ===== Certificates ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.cert-card');
+  if (!cards.length) return;
+
+  // Створюємо модальне вікно один раз
+  const modal = document.createElement('div');
+  modal.className = 'cert-modal';
+  modal.innerHTML = `
+    <div class="cert-modal__backdrop"></div>
+    <div class="cert-modal__content">
+      <button class="cert-modal__close" aria-label="Закрити">×</button>
+      <img class="cert-modal__img" src="" alt="">
+      <a class="cert-modal__pdf" href="#" target="_blank" rel="noopener" style="display:none">
+        Відкрити PDF ↗
+      </a>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const backdrop = modal.querySelector('.cert-modal__backdrop');
+  const closeBtn = modal.querySelector('.cert-modal__close');
+  const modalImg = modal.querySelector('.cert-modal__img');
+  const modalPdf = modal.querySelector('.cert-modal__pdf');
+
+  function openModal(imgSrc, pdfHref, title) {
+    modalImg.src = imgSrc;
+    modalImg.alt = title || 'Сертифікат';
+
+    if (pdfHref) {
+      modalPdf.href = pdfHref;
+      modalPdf.style.display = 'inline-block';
+    } else {
+      modalPdf.style.display = 'none';
+    }
+
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+    // Очищаємо src, щоб не тримати велике зображення в пам'яті
+    setTimeout(() => {
+      modalImg.src = '';
+    }, 300);
+  }
+
+  cards.forEach(card => {
+    const img = card.querySelector('.cert-frame img');
+    const link = card.querySelector('.cert-link');
+    const title = card.querySelector('h3')?.textContent || '';
+
+    if (!img) return;
+
+    card.style.cursor = 'pointer';
+
+    card.addEventListener('click', (e) => {
+      // Якщо клікнули саме на посилання PDF — не відкриваємо модалку
+      if (e.target.closest('.cert-link')) return;
+
+      const pdfHref = link ? link.href : null;
+      openModal(img.src, pdfHref, title);
+    });
+  });
+
+  // Закриття
+  closeBtn.addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+});
