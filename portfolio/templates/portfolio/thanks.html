@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дякую за звернення — Максим Диков</title>
+<meta name="description" content="Ваше повідомлення надіслано. Максим Диков зв'яжеться з вами найближчим часом.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="{% url 'portfolio:index' %}" class="logo" aria-label="На початок">
+      <span class="logo-mark">МД</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero thanks-section">
+    <div class="wrap thanks-grid">
+
+      <div class="thanks-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 240 240" class="ornament-svg">
+          <circle cx="120" cy="120" r="100" fill="none" stroke="#1B3A6B" stroke-width="1.5" stroke-dasharray="2 10"/>
+          <path d="M75 122 L105 152 L168 88"
+                fill="none" stroke="#E8B93D" stroke-width="8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="hero-copy reveal thanks-copy">
+        <p class="eyebrow"><span class="stitch-dot"></span>Повідомлення надіслано</p>
+        <h1 class="hero-title">Дякую!</h1>
+        <p class="hero-lede">
+          Ваша заявка отримана. Я передивлюсь її найближчим часом і зв’яжусь
+          з вами електронною поштою або в Telegram, щоб обговорити деталі проєкту.
+        </p>
+        <div class="hero-actions">
+          <a href="{% url 'portfolio:index' %}" class="btn btn-primary">На головну</a>
+          <a href="https://t.me/santar4" target="_blank" rel="noopener" class="btn btn-ghost">Написати в Telegram</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="stitch-divider" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Максим Диков</span>
+    <span class="footer-stitch" aria-hidden="true">✕ ✕ ✕</span>
+    <a href="{% url 'portfolio:index' %}">На головну ↑</a>
+  </div>
+</footer>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

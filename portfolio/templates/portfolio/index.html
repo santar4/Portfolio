@@ -1,0 +1,511 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Максим Диков — Full-stack розробник</title>
+<meta name="description" content="Портфоліо Максима Дикова — full-stack розробника сайтів для малого та середнього бізнесу в Україні.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body id="top">
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="На початок">
+      <span class="logo-mark">МД</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#about">Про мене</a>
+      <a href="#experience">Досвід</a>
+      <a href="#skills">Навички</a>
+      <a href="#certificates">Сертифікати</a>
+      <a href="#projects">Проєкти</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <a href="#contact" class="btn btn-small btn-primary nav-cta">Написати мені</a>
+    <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="stitch-dot"></span>Full-stack розробник · Україна</p>
+        <h1 class="hero-title">Максим<br>Диков</h1>
+        <p class="hero-lede">
+          Створюю сайти під ключ — від сервера до останнього пікселя — для малого
+          та середнього бізнесу: ресторанів, кав’ярень, сервісних компаній.
+          Backend, frontend, деплой і просування — усе роблю сам.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Переглянути проєкти</a>
+          <a href="#contact" class="btn btn-ghost">Написати мені</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="hero-meta-num">4+</span>
+            <span class="hero-meta-label">завершених проєкти</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-num">100%</span>
+            <span class="hero-meta-label">самостійна розробка</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-num">GoITeens</span>
+            <span class="hero-meta-label">Python Pro, сертифікат</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 420 460" class="ornament-svg">
+          <defs>
+            <linearGradient id="wheatGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#E8B93D"/>
+              <stop offset="1" stop-color="#B33A2E"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="230" r="180" fill="none" stroke="#1B3A6B" stroke-width="1.5" stroke-dasharray="2 10"/>
+          <g stroke="url(#wheatGrad)" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M210 90 L210 330"/>
+            <path d="M210 130 L182 100 M210 130 L238 100"/>
+            <path d="M210 165 L180 138 M210 165 L240 138"/>
+            <path d="M210 200 L178 172 M210 200 L242 172"/>
+            <path d="M210 235 L180 208 M210 235 L240 208"/>
+            <path d="M210 270 L182 244 M210 270 L238 244"/>
+          </g>
+          <g class="cross-cluster">
+            <path d="M90 340 L110 360 M110 340 L90 360" stroke="#1B3A6B" stroke-width="4" stroke-linecap="round"/>
+            <path d="M320 120 L340 140 M340 120 L320 140" stroke="#E8B93D" stroke-width="4" stroke-linecap="round"/>
+            <path d="M330 350 L348 368 M348 350 L330 368" stroke="#B33A2E" stroke-width="4" stroke-linecap="round"/>
+            <path d="M75 150 L93 168 M93 150 L75 168" stroke="#E8B93D" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="stitch-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="stitch-dot"></span>Про мене</p>
+        <h2>17 років, повний цикл розробки — з нуля й до запуску.</h2>
+      </div>
+      <div class="about-copy reveal">
+        <p>
+          Мене звати Максим, мені 17 років, і я навчаюсь в університеті за спеціальністю
+          <strong>«Інженерія програмного забезпечення»</strong> (група F2). Розробляю сайти
+          для комерційних бізнесів — малого та середнього масштабу: ресторани, кав’ярні,
+          сервісні компанії.
+        </p>
+        <p>
+          Веду проєкт повністю самостійно: сервер, бекенд, фронтенд, деплой і подальша
+          підтримка — усе на мені. Окрім розробки, займаюсь digital-маркетингом і контентом
+          для соціальних мереж клієнтів. Проходив курси <strong>GoITeens</strong>, де здобув
+          практичні навички Python-розробки.
+        </p>
+        <p class="about-model">
+          Працюю за прозорою моделлю: фіксована плата за розробку сайту + щомісячна оплата
+          за хостинг і підтримку.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true"></div>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-soft" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="stitch-dot"></span>Досвід</p>
+        <h2>Не лише код — а робота, що приносить бізнесу результат.</h2>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-top">
+          <h3>Delicat — клінінгова компанія, Обухів</h3>
+          <span class="exp-tag">Повний цикл: сайт + маркетинг</span>
+        </div>
+        <p>
+          Веду для клієнта одразу декілька напрямів: Django-сайт (оптимізація моделей,
+          валідація телефонів, lazy loading відео на 13 роликів «до/після»), налаштування
+          та ведення Google Business Profile з нуля.
+        </p>
+        <ul class="exp-list">
+          <li>Django: оптимізація моделей, транзакції, безпечні view-обробники</li>
+          <li>Продуктивність: lazy loading відео, CDN через Cloudinary</li>
+          <li>Google Business Profile: категорії, пости, фото, Q&amp;A, локальне SEO</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="stitch-dot"></span>Навички</p>
+        <h2>Інструменти, якими я користуюсь щодня.</h2>
+      </div>
+
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">Flask</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">REST API</span>
+            <span class="chip">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Bootstrap 5</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Інфраструктура</h3>
+          <div class="chips">
+            <span class="chip">Git / GitHub</span>
+            <span class="chip">Render</span>
+            <span class="chip">Railway</span>
+            <span class="chip">Cloudinary</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Маркетинг</h3>
+          <div class="chips">
+            <span class="chip">Google Business Profile</span>
+            <span class="chip">Відеомонтаж (ffmpeg)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true"></div>
+
+  <!-- CERTIFICATES -->
+  <section class="section section-soft" id="certificates">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">
+        <span class="stitch-dot"></span>Сертифікати
+      </p>
+      <h2>Курси GoITeens.</h2>
+    </div>
+
+    <div class="cert-grid reveal">
+
+      {% for certificate in certificates %}
+        <article class="cert-card">
+
+          <div class="cert-frame">
+            <img
+              src="{{ certificate.image.url }}"
+              alt="{{ certificate.title }}"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="cert-info">
+            <h3>{{ certificate.title }}</h3>
+
+            <p>{{ certificate.description }}</p>
+
+            {% if certificate.pdf %}
+              <a
+                class="cert-link"
+                href="{{ certificate.pdf.url }}"
+                target="_blank"
+                rel="noopener"
+              >
+                Відкрити сертифікат ↗
+              </a>
+            {% endif %}
+          </div>
+
+        </article>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">
+        <span class="stitch-dot"></span>Проєкти
+      </p>
+
+      <h2>Код, який можна подивитись на GitHub.</h2>
+
+      <a
+        class="btn btn-ghost btn-small"
+        href="https://github.com/santar4"
+        target="_blank"
+        rel="noopener"
+      >
+        Весь профіль GitHub ↗
+      </a>
+    </div>
+
+    <div class="projects-grid reveal">
+
+        <!-- DELICAT -->
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Django · Bootstrap 5</span>
+        </div>
+
+        <h3>Delicat</h3>
+
+        <p>
+          Сайт для клінінгової компанії на Django 5.0 та Bootstrap 5.
+          Задеплоєно на Railway, медіафайли — через Cloudinary.
+        </p>
+
+        <div class="chips chips-sm">
+          <span class="chip">Django 5.0</span>
+          <span class="chip">Bootstrap 5</span>
+          <span class="chip">Railway</span>
+          <span class="chip">Cloudinary</span>
+        </div>
+
+        <a
+          class="project-link"
+          href="https://delicat-cleaning-web-production.up.railway.app/"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути сайт ↗
+        </a>
+
+        <a
+          class="project-link"
+          href="https://github.com/santar4?tab=repositories"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути на GitHub ↗
+        </a>
+      </article>
+
+      <!-- TRATTORIA BELLA -->
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Django · Bootstrap 5</span>
+        </div>
+
+        <h3>Trattoria Bella</h3>
+
+        <p>
+          Демо-сайт ресторану на Django 5.0 та Bootstrap 5.
+          Задеплоєно на Railway, медіафайли — через Cloudinary.
+        </p>
+
+        <div class="chips chips-sm">
+          <span class="chip">Django 5.0</span>
+          <span class="chip">Bootstrap 5</span>
+          <span class="chip">Railway</span>
+          <span class="chip">Cloudinary</span>
+        </div>
+
+        <a
+          class="project-link"
+          href="https://web-production-a56b6.up.railway.app/"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути сайт ↗
+        </a>
+
+        <a
+          class="project-link"
+          href="https://github.com/santar4/restaurant-template"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути на GitHub ↗
+        </a>
+      </article>
+
+      <!-- SNEAKERSPOT -->
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">E-commerce</span>
+        </div>
+
+        <h3>SNEAKERSPOT</h3>
+
+        <p>
+          Інтернет-магазин кросівок: каталог, кошик та оформлення замовлення.
+          Практика роботи з базою даних товарів і повноцінним flow покупця.
+        </p>
+
+        <div class="chips chips-sm">
+          <span class="chip">Python</span>
+          <span class="chip">Django</span>
+          <span class="chip">PostgreSQL</span>
+        </div>
+
+        <a
+          class="project-link"
+          href="https://github.com/santar4/sneaker-shop-flask"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути на GitHub ↗
+        </a>
+      </article>
+
+
+      <!-- CURRENCY BOT -->
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Telegram Bot</span>
+        </div>
+
+        <h3>Конвертер валют</h3>
+
+        <p>
+          Telegram-бот, що конвертує суми між валютами за актуальним курсом
+          через зовнішнє API. Проста, але корисна автоматизація.
+        </p>
+
+        <div class="chips chips-sm">
+          <span class="chip">Python</span>
+          <span class="chip">Telegram API</span>
+          <span class="chip">REST API</span>
+        </div>
+
+        <a
+          class="project-link"
+          href="https://t.me/Test_Currency_Exchange_ua_bot"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути через телеграм ↗
+        </a>
+        <a
+          class="project-link"
+          href="https://github.com/santar4/currency-exchange"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути на GitHub ↗
+        </a>
+      </article>
+
+
+      <!-- WEATHER -->
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-tag">Web App</span>
+        </div>
+
+        <h3>Weather Forecast</h3>
+
+        <p>
+          Веб-застосунок прогнозу погоди: запит до зовнішнього API погоди
+          та вивід даних у зручному інтерфейсі.
+        </p>
+
+        <div class="chips chips-sm">
+          <span class="chip">Python</span>
+          <span class="chip">Flask</span>
+          <span class="chip">REST API</span>
+        </div>
+        <a
+          class="project-link"
+          href="https://github.com/santar4?tab=repositories"
+          target="_blank"
+          rel="noopener"
+        >
+          Переглянути на GitHub ↗
+        </a>
+      </article>
+
+    </div>
+
+
+  </div>
+</section>
+
+<div class="stitch-divider" aria-hidden="true"></div>
+
+  <!-- CONTACT -->
+  <section class="section section-soft" id="contact">
+    <div class="wrap contact-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow"><span class="stitch-dot"></span>Контакти</p>
+        <h2>Є проєкт для сайту? Напишіть — обговоримо.</h2>
+        <p class="about-model">
+          Заповніть форму, і вона відкриє готовий лист у вашій поштовій програмі —
+          нічого нікуди не надсилається без вашого підтвердження.
+        </p>
+        <div class="contact-links">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mdykovv@gmail.com&su=Запит%20щодо%20розробки%20сайту" target="_blank">mdykovv@gmail.com</a>
+          <a href="https://t.me/santar4" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://github.com/santar4" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+    {% csrf_token %}
+
+    <label>
+        Ім’я
+        <input type="text" name="name" required placeholder="Як до вас звертатись?">
+    </label>
+
+    <label>
+        Email або Telegram
+        <input type="text" name="contact" required placeholder="Для звʼязку">
+    </label>
+
+    <label>
+        Повідомлення
+        <textarea name="message" rows="4" required placeholder="Коротко про проєкт"></textarea>
+    </label>
+
+    <button type="submit" class="btn btn-primary">Надіслати</button>
+</form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Максим Диков</span>
+    <span class="footer-stitch" aria-hidden="true">✕ ✕ ✕</span>
+    <a href="#top">Нагору ↑</a>
+  </div>
+</footer>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
